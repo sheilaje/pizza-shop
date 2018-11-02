@@ -38,11 +38,22 @@ Pizza.prototype.sizeBasedAmount = function(){
 }
 
 Pizza.prototype.calculateCost = function(tBasedAmt, size){
-  var totalCost = this.noOfToppings + size;
+  var totalCost = this.noOfToppings + this.size;
 }
 
 $(document).ready(function(){
   $("#formid").submit(function(event){
     event.preventDefault();
+    var pizza = new Pizza();
+    var inputtedName = $("#name").val();
+    var inputtedNoToppings = parseInt($("#noToppings").val());
+    $("input:checkbox[name=toppingCheck]:checked").each(function(){
+     var inputtedToppings = $(this).val();
+     $("#displayToppings").append(inputtedToppings + ",");
+   });
+   var inputtedSize = $("input:radio[name=sizePizza]").val();
+   $("#displayName").text(inputtedName);
+   $("#displaySize").append(inputtedSize);
   });
+
 });
