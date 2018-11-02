@@ -42,5 +42,7 @@ Pizza.prototype.calculateCost = function(tBasedAmt, size){
 }
 
 $(document).ready(function(){
-  
+  $("#formid").submit(function(event){
+    event.preventDefault();
+  });
 });

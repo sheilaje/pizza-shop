@@ -11,11 +11,108 @@
     <title>Pizza Shop</title>
   </head>
   <body>
-    <div class="container-fluid">
+    <div class="container">
+      <div>
+        <img src="images/PizzaTop.jpg" alt="PicOfAPizza" class= "rounded">
+        <h1><em>Pizza House</em></h1>
+      <div>
 
-    <img src="images/PizzaTop.jpg" alt="PicOfAPizza" class= "rounded">
-    <h1><em>Pizza House</em></h1>
-  </div>
+          <div class="row">
+            <div class="col-md-8">
 
+              <form id="formid">
+                <div class="form-group">
+                  <label for="name">Name :</label>
+                  <input type="text"  class="form-control" id="name" placeholder="Name">
+                </div>
+                <!-- <div class="form-group">
+                  <label for="noToppings">Number of Toppings :</label>
+                  <input type="text"  class="form-control" id="noToppings" placeholder="No of toppings">
+                </div> -->
+
+
+                <div>
+                  <label for="noToppings">Number of Toppings : </label>
+                  <select id="noToppings" class="form-control">
+                    <option selected>Choose the number of toppings</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                  </select>
+                </div>
+
+
+                <div class="form-check">
+            <label for="chooseToppings"><strong><em>Choose your Toppings:</em></strong></label><br>
+
+            <input class="form-check-input" type="checkbox" value="1" id="defaultCheck1">
+            <label class="form-check-label" for="cheese">
+              Cheese
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="2" id="defaultCheck2" >
+            <label class="form-check-label" for="pepperoni">
+              Pepperoni
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="3" id="defaultCheck3" >
+            <label class="form-check-label" for="Olives">
+              Olives
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="4" id="defaultCheck4" >
+            <label class="form-check-label" for="Chicken">
+              Chicken
+            </label>
+          </div>
+
+
+          <div class="form-check">
+
+            <label for="chooseToppings"><strong><em>Choose the size of your Pizza:</em></strong></label><br>
+
+
+            <input class="form-check-input" type="radio" name="sizePizza" id="option1" value="1">
+            <label class="form-check-label" for="sizeSmall">
+              Small
+            </label>
+          </div>
+          <div class="form-check">
+              <input class="form-check-input" type="radio" name="sizePizza" id="option2" value="2">
+              <label class="form-check-label" for="sizeMedium">
+                Medium
+              </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="sizePizza" id="option3" value="3">
+                <label class="form-check-label" for="sizeLarge">
+                  Large
+                </label>
+              </div><br>
+
+
+                <button type="submit" class="btn-primary">Checkout</button>
+              </form>
+            </div>
+
+            <div class="col-md-4">
+              <div id="show-contact">
+                <p>You final cost is...</p>
+                <p>Name: <span class="first-name"></span></p>
+                <p>Toppings: <span class="last-name"></span></p>
+                <p>Size: <span class="phone-number"></span></p>
+                <p>Total cost: <span class="address"></span></p>
+
+                <div id="buttons">
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
   </body>
 </html>

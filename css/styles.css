@@ -1,12 +1,12 @@
 img{
-  /* shape-outside: margin-box; */
-  width: 1000px;
+  width: 3000px;
   height: 280px;
+  float:left;
 }
 h1{
-  position:absolute;
+  /* position:absolute;
   top: 120px;
   left:45px;
-  width:150px;
+  width:150px; */
   font-weight: bolder;
 }
