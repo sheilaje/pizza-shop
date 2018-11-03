@@ -10,3 +10,7 @@ h1{
   width:150px; */
   font-weight: bolder;
 }
+
+#show-Bill{
+  display :none;
+}
