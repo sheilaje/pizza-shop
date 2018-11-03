@@ -23,11 +23,11 @@ _No Known Bugs_
 ## Specs
 
 * _[X] Create a constructor - pizza , with properties size and toppings._
-* _[] Create a prototype calculateCost based on the size and the number of toppings selected by the User. Find the length of the Toppings array and get the size of the pizza.if number of toppings is 2 ,its price is $5. If pizza chosen by the user is size s, then its price is $4_
+* _[X] Create a prototype calculateCost based on the size and the number of toppings selected by the User. Find the length of the Toppings array and get the size of the pizza.if number of toppings is 2 ,its price is (2*3). If pizza chosen by the user is size s, then its price is $4_
     * _Example Input :_
                   * _Number of toppings = 2_
                   * _Size of pizza chosen by user = s_
-    * _Example Output : the cost of pizza is - $9_
+    * _Example Output : the cost of pizza is - $10 (6+4)_
 
 ## Technologies Used
 
