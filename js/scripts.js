@@ -3,21 +3,21 @@ function Pizza(toppings, size){
   this.size = size
 }
 
-Pizza.prototype.toppingsBasedAmount = function(toppings){
-    if(toppings.length != 0){
-      var toppingPrice = toppings.length *3;
+Pizza.prototype.toppingsBasedAmount = function(){
+    if(this.toppings.length != 0){
+      var toppingPrice = this.toppings.length *3;
       return toppingPrice;
     }else {
       alert("please choose your Toppings !!")
     }
   }
 
-Pizza.prototype.sizeBasedAmount = function(size){
-  if (size === "Small"){
+Pizza.prototype.sizeBasedAmount = function(){
+  if (this.size === "Small"){
     return 4;
-  } else if(size === "Medium"){
+  } else if(this.size === "Medium"){
     return 5;
-  } else if(size === "Large"){
+  } else if(this.size === "Large"){
     return 6;
   } else {
     alert ("Please select a size that you would prefer");
@@ -26,7 +26,7 @@ Pizza.prototype.sizeBasedAmount = function(size){
 
 Pizza.prototype.calculateCost = function(tBasedAmt, sizeBasedAmt){
   var totalCost =tBasedAmt +sizeBasedAmt;
-  $("#displayTotalCost").text(totalCost);
+  $("#displayTotalCost").html(totalCost);
 }
 
 var pizza;
@@ -40,19 +40,17 @@ $(document).ready(function(){
     $("input:checkbox[name=toppingCheck]:checked").each(function(){
      var inputtedToppings = $(this).val();
      toppingArray.push(inputtedToppings);
-     $("#displayToppings").append(inputtedToppings + ",");
+     $("#displayToppings").text(inputtedToppings + ",");
    });
 
    var inputtedSize =$("input:radio[name=sizePizza]:checked").val();
    $("#displayName").text(inputtedName);
-   $("#displaySize").append(inputtedSize);
+   $("#displaySize").text(inputtedSize);
 
    pizza = new Pizza(toppingArray,inputtedSize);
 
-   var toppingBasedAmt = pizza.toppingsBasedAmount(toppingArray);
-   console.log(toppingBasedAmt);
-   var sizeBasedAmt = pizza.sizeBasedAmount(inputtedSize);
-   console.log(sizeBasedAmt);
+   var toppingBasedAmt = pizza.toppingsBasedAmount();
+   var sizeBasedAmt = pizza.sizeBasedAmount();
    pizza.calculateCost(toppingBasedAmt, sizeBasedAmt);
   });
 });
